@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(
+    circle,
+    #e6eaf2,
+    #c9cfe3
+  ); /* Soft pinkish-white gradient */
+  color: #1a1a3d; /* Dark blue text color for better contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 20px;
+}
+.advanced-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(
+    145deg,
+    #c9cfe3,
+    #e6eaf2
+  ); /* Pinkish-white gradient background */
+  border-radius: 30px;
+  box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.2),
+    -12px -12px 25px rgba(0, 0, 0, 0.1); /* Soft shadows */
+  position: relative;
+}
+.logo-wrapper {
+  margin-bottom: 20px;
+}
+.logo-circle {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(
+    145deg,
+    #e6eaf2,
+    #c9cfe3
+  ); /* Pinkish-white gradient for the logo circle */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 5px 5px 12px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 12px rgba(200, 200, 200, 0.2); /* Inner shadow softened */
+}
+.logo-circle h1 {
+  font-size: 4rem; /* Increase the font size to make the emoji bigger */
+  color: #1a1a3d; /* Dark blue text color */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 40px rgba(255, 255, 255, 0.8); /* Glow effect */
+  text-align: center;
+  line-height: 1.1;
+}
+.logo-circle .glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  animation: glow 1.5s ease-in-out infinite;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 40px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5),
+      0 0 60px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 40px rgba(255, 255, 255, 0.7);
+  }
+}
+.tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1a1a3d; /* Dark blue for readability */
+  margin-bottom: 30px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.2); /* Light background with transparency */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Subtle card shadow */
+}
+.action-button {
+  padding: 15px 25px;
+  font-size: 1.5rem;
+  background: #1a1a3d; /* Dark blue button color */
+  border: none;
+  border-radius: 30px;
+  color: #ffffff; /* White text for button */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.action-button:hover {
+  background: #0f0f2d; /* Darker shade of blue for hover effect */
+  transform: scale(1.05);
+}
+.response-box {
+  margin-top: 20px;
+  background: #ffffff; /* Set background color to white */
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #1a1a3d; /* Dark blue text color */
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1); /* Softer inner shadow */
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #1a1a3d; /* Dark blue footer text */
+  text-align: center;
+}
+footer a {
+  color: #1a1a3d; /* Matching dark blue for footer links */
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Placeholder text color update */
+::placeholder {
+  color: #c9cfe3; /* Light blue placeholder color */
+  opacity: 1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .advanced-container {
+    padding: 30px 15px;
+    max-width: 90%;
+  }
+
+  .logo-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo-circle h1 {
+    font-size: 3rem;
+  }
+
+  .action-button {
+    padding: 12px 22px;
+    font-size: 1.3rem;
+  }
+
+  .response-box {
+    font-size: 1.1rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .advanced-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .logo-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo-circle h1 {
+    font-size: 2.5rem;
+  }
+
+  .action-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+
+  .response-box {
+    font-size: 1rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+}
